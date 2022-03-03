@@ -7,7 +7,7 @@ from crawlers import LOG
 
 class Paths:
 
-    pages: int = 150
+    pages: int = 100000
     root: str = 'https://millercenter.org'
     speeches_page: str = 'https://millercenter.org/the-presidency/presidential-speeches'
     page_url: str = '?field_speech_date_value%5Bmin%5D=&field_speech_date_value%5Bmax%5D=&field_full_node_value=&page='
@@ -32,7 +32,14 @@ class PoliticianCrawler(object):
             url: str = f"{Paths.root}{link}"
             title: str = url.split('/')[-1]
 
-            res: object = requests.get(url)
+            try:
+
+                res: object = requests.get(url)
+                
+            except Exception as err:
+                LOG.info(err)
+                continue
+
             page: object = BeautifulSoup(res.content, 'html.parser')
 
             text: list = [ i.get_text() for i in page.find_all('p') ]
@@ -61,13 +68,21 @@ class PoliticianCrawler(object):
 
             if self.verbose: LOG.info(f'Page {page} Gathered.....')
 
-            speeches: str = f'{Paths.speeches_page}{Paths.page_url}{page}'
+            try:
+                speeches: str = f'{Paths.speeches_page}{Paths.page_url}{page}'
 
-            res: object = requests.get(speeches)
-            page: object = BeautifulSoup(res.content, 'html.parser')
+                res: object = requests.get(speeches)
+                page: object = BeautifulSoup(res.content, 'html.parser')
 
-            links: list  = [ link['href'] for link in page.find_all('a', href=True) if re.match(regex, link['href']) ]
+                links: list  = [ link['href'] for link in page.find_all('a', href=True) if re.match(regex, link['href']) ]
 
-            speech_links.extend(links)
+                if len(links) == 0:
+                    LOG.info(f'Reached End of Pages...')
+                    break
+                speech_links.extend(links)
+
+            except Exception as err:
+                LOG.info(err)
+                
 
         self.saveSpeeches(speech_links=speech_links)

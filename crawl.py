@@ -26,7 +26,7 @@ class Scrapers():
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--i', '--identity', type=str, help='name of author')
+    parser.add_argument('-i', '-identity', type=str, help='name of author')
 
     args = parser.parse_args()
 

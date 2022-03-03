@@ -2,3 +2,5 @@ webscraper_env/
 .vscode/
 __pycache__/
 data/
+*.csv
+president_data.json
