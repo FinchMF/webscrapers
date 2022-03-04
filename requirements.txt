@@ -4,27 +4,210 @@
 #
 #    pip-compile
 #
+appnope==0.1.2
+    # via
+    #   ipykernel
+    #   ipython
+asttokens==2.0.5
+    # via stack-data
+backcall==0.2.0
+    # via ipython
 beautifulsoup4==4.10.0
     # via -r requirements.in
+blis==0.7.6
+    # via
+    #   spacy
+    #   thinc
+catalogue==2.0.6
+    # via
+    #   spacy
+    #   srsly
+    #   thinc
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.10
     # via requests
+click==8.0.4
+    # via
+    #   nltk
+    #   typer
+cycler==0.11.0
+    # via matplotlib
+cymem==2.0.6
+    # via
+    #   preshed
+    #   spacy
+    #   thinc
+debugpy==1.5.1
+    # via ipykernel
+decorator==5.1.1
+    # via ipython
+entrypoints==0.4
+    # via jupyter-client
+executing==0.8.3
+    # via stack-data
+fonttools==4.29.1
+    # via matplotlib
 idna==3.3
     # via requests
+ipykernel==6.9.1
+    # via -r requirements.in
+ipython==8.1.0
+    # via ipykernel
+jedi==0.18.1
+    # via ipython
+jinja2==3.0.3
+    # via spacy
+joblib==1.1.0
+    # via nltk
+jupyter-client==7.1.2
+    # via ipykernel
+jupyter-core==4.9.2
+    # via jupyter-client
+kiwisolver==1.3.2
+    # via matplotlib
+langcodes==3.3.0
+    # via spacy
+markupsafe==2.1.0
+    # via jinja2
+matplotlib==3.5.1
+    # via
+    #   -r requirements.in
+    #   wordcloud
+matplotlib-inline==0.1.3
+    # via
+    #   ipykernel
+    #   ipython
+murmurhash==1.0.6
+    # via
+    #   preshed
+    #   spacy
+    #   thinc
+nest-asyncio==1.5.4
+    # via
+    #   ipykernel
+    #   jupyter-client
+nltk==3.7
+    # via -r requirements.in
 numpy==1.22.2
-    # via pandas
+    # via
+    #   blis
+    #   matplotlib
+    #   pandas
+    #   spacy
+    #   thinc
+    #   wordcloud
+packaging==21.3
+    # via
+    #   matplotlib
+    #   spacy
 pandas==1.4.1
     # via -r requirements.in
+parso==0.8.3
+    # via jedi
+pathy==0.6.1
+    # via spacy
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
+pillow==9.0.1
+    # via
+    #   matplotlib
+    #   wordcloud
+plotly==5.6.0
+    # via -r requirements.in
+preshed==3.0.6
+    # via
+    #   spacy
+    #   thinc
+prompt-toolkit==3.0.28
+    # via ipython
+ptyprocess==0.7.0
+    # via pexpect
+pure-eval==0.2.2
+    # via stack-data
+pydantic==1.8.2
+    # via
+    #   spacy
+    #   thinc
+pygments==2.11.2
+    # via ipython
+pyparsing==3.0.7
+    # via
+    #   matplotlib
+    #   packaging
 python-dateutil==2.8.2
-    # via pandas
+    # via
+    #   jupyter-client
+    #   matplotlib
+    #   pandas
 pytz==2021.3
     # via pandas
+pyzmq==22.3.0
+    # via jupyter-client
+regex==2022.3.2
+    # via nltk
 requests==2.27.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   spacy
 six==1.16.0
-    # via python-dateutil
+    # via
+    #   plotly
+    #   python-dateutil
+smart-open==5.2.1
+    # via pathy
 soupsieve==2.3.1
     # via beautifulsoup4
+spacy==3.2.3
+    # via -r requirements.in
+spacy-legacy==3.0.9
+    # via spacy
+spacy-loggers==1.0.1
+    # via spacy
+srsly==2.4.2
+    # via
+    #   spacy
+    #   thinc
+stack-data==0.2.0
+    # via ipython
+tenacity==8.0.1
+    # via plotly
+thinc==8.0.13
+    # via spacy
+tornado==6.1
+    # via
+    #   ipykernel
+    #   jupyter-client
+tqdm==4.63.0
+    # via
+    #   nltk
+    #   spacy
+traitlets==5.1.1
+    # via
+    #   ipykernel
+    #   ipython
+    #   jupyter-client
+    #   jupyter-core
+    #   matplotlib-inline
+typer==0.4.0
+    # via
+    #   pathy
+    #   spacy
+typing-extensions==4.1.1
+    # via pydantic
 urllib3==1.26.8
     # via requests
+wasabi==0.9.0
+    # via
+    #   spacy
+    #   spacy-loggers
+    #   thinc
+wcwidth==0.2.5
+    # via prompt-toolkit
+wordcloud==1.8.1
+    # via -r requirements.in
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

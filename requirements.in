@@ -1,3 +1,10 @@
 requests
 beautifulsoup4
 pandas
+nltk
+spacy
+ipykernel
+matplotlib
+plotly
+wordcloud
+scikit-learn
