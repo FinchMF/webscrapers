@@ -28,7 +28,7 @@ def writeOut(text: str, fname: str) -> dict:
     except Exception as err:
 
         res['sucess'] = False
-        res['error': err]
+        res['error'] = err
 
     return res
 
